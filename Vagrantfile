@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.synced_folder "provision/vhosts", "/etc/apache2/vhosts", create: true
-    config.vm.synced_folder "/Users/daviddiazgarcia/Documents/Projects", "/var/www", create: true, group: "www-data", owner: "www-data"
+    config.vm.synced_folder "/Users/David/Projects", "/var/www", create: true, group: "www-data", owner: "www-data"
 
     config.vm.provision :shell, :path => "provision/setup.sh"
     config.vm.provision :shell, :path => "provision/hosts.sh"
